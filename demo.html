@@ -382,6 +382,36 @@
             </li>
         </ul>
 
+        <!--QR Code -->
+        <img src="image/qrcodes/demo.png" alt="QR Code" style="max-width: 350px; height: auto">
+
+        <ul>
+            <!--Share -->
+            <li>
+                <a href="#" onclick="shareLink()">
+                    <div class="icon-container">
+                        <i class="fas fa-share-square"></i>
+                    </div>
+                    <span class="overflow-wrap">Share This LinkBook Page</span>
+                </a>
+            </li>
+        </ul>
+
+        <script>
+            function shareLink() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    })
+                    .then(() => console.log('Successfully shared link'))
+                    .catch((error) => console.error('Error sharing link:', error));
+                } else {
+                    // Fallback if the browser doesn't support the Web Share API
+                    alert('Your browser does not support sharing.');
+                }
+            }
+        </script>
 
     </div>
 
