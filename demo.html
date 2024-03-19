@@ -46,9 +46,50 @@
 
             body {
                 font-family: 'Changa', sans-serif;
-                background-color: #F2F2F2;
-
+                /* background-color: #F2F2F2; */
+                /* Gradient background */
+                background: linear-gradient(to bottom right, #8D65E9, #6BCD94);
+                /* For older browsers */
+                background: -webkit-linear-gradient(to bottom right, #8D65E9, #6BCD94);
+                /* Apply animation */
+                animation: gradientAnimation 60s infinite;
+                /* Smooth transition */
+                transition-timing-function: ease-in-out;
             }
+
+            /* Define animation */
+            @keyframes gradientAnimation {
+    0%, 100% {
+        background: linear-gradient(to right, #8D65E9, #6BCD94);
+    }
+    10% {
+        background: linear-gradient(to right, #8D6BE9, #6BCD9E);
+    }
+    20% {
+        background: linear-gradient(to right, #8D72E9, #6BCDA7);
+    }
+    30% {
+        background: linear-gradient(to right, #8D78E9, #6BCDAF);
+    }
+    40% {
+        background: linear-gradient(to right, #8D7EE9, #6BCDB8);
+    }
+    50% {
+        background: linear-gradient(to right, #8D84E9, #6BCDC0);
+    }
+    60% {
+        background: linear-gradient(to right, #8D8AE9, #6BCDC9);
+    }
+    70% {
+        background: linear-gradient(to right, #8D90E9, #6BCDD1);
+    }
+    80% {
+        background: linear-gradient(to right, #8D96E9, #6BCDDA);
+    }
+    90% {
+        background: linear-gradient(to right, #8D9CE9, #6BCDE2);
+    }
+}
 
             .container {
                 max-width: 600px;
@@ -79,7 +120,7 @@
             padding: 10px 20px;
             color: #fff;
             text-decoration: none;
-            border: 1px solid #a4c1fd;
+            border: 3px solid #ffffff;
             border-radius: 10px;
             transition: background-color 0.3s ease;
             background: #2D6FF7;
@@ -94,7 +135,7 @@
             justify-content: center;
             margin: 5px;
             padding: 15px; /* Slightly bigger padding */
-            color: #26333B;
+            color: #ffffff;
             border: none;
             cursor: pointer;
             font-size: 1.5rem;
@@ -123,10 +164,11 @@
 
         /* Control the size of your profile picture */
         .profile-pic {
+            border: 3px solid #ffffff;
             border-radius: 50%;
             overflow: hidden;
-            width: 180px;
-            height: 180px;
+            width: 250px;
+            height: 250px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
             margin-top: -33px;
         }
@@ -174,7 +216,7 @@
             .profile-pic {
                 width: 100%;
                 height: auto;
-                max-width: 170px;
+                max-width: 250px;
                 margin: 15px auto 0px;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
             }
@@ -287,9 +329,9 @@
 </head>
 <body>
     <div class="container">
-        <img src="image/logo/linkin1-profile.jpg" alt="Profile Picture" class="profile-pic">
-        <h1 style="font-size: 2.0rem;">LinkBook</h1>
-        <p style="font-size: 0.92rem;">A single shareable link is all you need to connect and showcase all your other platforms in one place | Simplify your online identity with ease</p>
+        <img src="image/logo/TheRock.jpg" alt="Profile Picture" class="profile-pic">
+        <h1 style="font-size: 2.0rem; color: #ffffff;">Dwayne Johnson</h1>
+        <p style="font-size: 1.0rem; color: #ffffff;"><b>A single shareable link is all you need to connect and showcase all your other platforms in one place</b></p>
 
 
         <!-- Add social media icons -->
@@ -320,7 +362,7 @@
             <li>
                 <a href="https://linkbook.co.za/" target="_blank">
                     <div class="icon-container">
-                        <i class="fa fa-shopping-cart"></i>
+                        <i class="fa fa-home"></i>
                     </div>
                     <span class="overflow-wrap">Back To Home Page</span>
                 </a>
@@ -383,7 +425,7 @@
         </ul><hr><br>
 
         <!--QR Code -->
-        <img src="image/qrcodes/demo.png" alt="QR Code" style="max-width: 350px; height: auto">
+        <img src="image/qrcodes/demo.png" alt="QR Code" style="max-width: 350px; height: auto; border: 5px solid white;"><br><br>
 
         <ul>
             <!--Share -->
@@ -413,16 +455,13 @@
             }
         </script>
 
-    </div>
-
-    <footer style="font-size: 0.9rem; color: #000;">
     <div class="floating-container" id="floatingContainer">
         <div class="logo-container" id="logoContainer">
-            <img class="footer-svg" src="image/svg/linkin1.svg" alt="LinkBook" width="200" height="auto">
+            <img class="footer-svg" src="image/svg/linkin1-white.svg" alt="LinkBook" width="200" height="auto">
         </div>
     </div>
-    </footer>
 
+    </div>
 
 
     <script>
