@@ -1695,28 +1695,6 @@
         </div>
     </div>
 
-    <script>
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-          // If the website is opened in standalone mode
-          const lastVisitedPage = localStorage.getItem('lastVisitedPage');
-          if (lastVisitedPage) {
-            // If there's a last visited page stored in localStorage
-            const manifest = document.querySelector('link[rel="manifest"]');
-            if (manifest) {
-              // Update start_url in the manifest file
-              const manifestHref = manifest.getAttribute('href');
-              fetch(manifestHref)
-                .then(response => response.json())
-                .then(data => {
-                  data.start_url = lastVisitedPage;
-                  // Save updated manifest data
-                  localStorage.setItem('updatedManifest', JSON.stringify(data));
-                });
-            }
-          }
-        }
-      </script>
-
 </body>
 
 </html>
